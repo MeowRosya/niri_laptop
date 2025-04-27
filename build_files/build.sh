@@ -12,6 +12,12 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
+
+dnf5 -y copr enable yalter/niri
+dnf5 -y install niri alacritty fuzzel nautilus flatpak gdm
+dnf5 -y copr disable yalter/niri
+
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
