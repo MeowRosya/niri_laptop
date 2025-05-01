@@ -14,7 +14,7 @@ set -ouex pipefail
 cd /tmp
 wget https://li.nux.ro/download/nux/dextop/el7/x86_64/webcore-fonts-3.0-1.noarch.rpm
 wget https://li.nux.ro/download/nux/dextop/el7/x86_64/webcore-fonts-vista-3.0-1.noarch.rpm
-rpm-ostree install google-noto-fonts-all ./webcore-fonts*
+rpm-ostree install google-noto-fonts ./webcore-fonts*
 
 # Use a COPR Example:
 #
