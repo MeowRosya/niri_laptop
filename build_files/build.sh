@@ -11,12 +11,10 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 
-dnf5 install -y google-noto-fonts-all
-
 cd /tmp
 wget https://li.nux.ro/download/nux/dextop/el7/x86_64/webcore-fonts-3.0-1.noarch.rpm
 wget https://li.nux.ro/download/nux/dextop/el7/x86_64/webcore-fonts-vista-3.0-1.noarch.rpm
-dnf5 install -y ./webcore-fonts*
+rpm-ostree install google-noto-fonts-all ./webcore-fonts*
 
 # Use a COPR Example:
 #
