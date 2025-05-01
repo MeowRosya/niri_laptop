@@ -10,13 +10,13 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
 
+dnf5 -y install google-noto-fonts-all
 
-dnf5 -y copr enable yalter/niri
-dnf5 -y install niri alacritty fuzzel nautilus flatpak gdm
-dnf5 -y copr disable yalter/niri
-
+cd /tmp
+wget https://li.nux.ro/download/nux/dextop/el7/x86_64/webcore-fonts-3.0-1.noarch.rpm
+wget https://li.nux.ro/download/nux/dextop/el7/x86_64/webcore-fonts-vista-3.0-1.noarch.rpm
+sudo dnf install ./webcore-fonts*
 
 # Use a COPR Example:
 #
